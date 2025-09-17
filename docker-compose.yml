@@ -1,8 +1,8 @@
 services:
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
+    image: nginx:alpine
+    volumes:
+      - ./frontend/dist:/usr/share/nginx/html
     ports:
       - "80:80"
 
